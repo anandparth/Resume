@@ -3,81 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parth Anand — Product Designer Resume</title>
+  <title>Parth Anand — Product Designer</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Calibri', 'Arial', sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.45;
-      color: #1a1a1a;
       background: #fff;
-      padding: 0;
+      color: #2d2d2d;
     }
-    .page { max-width: 760px; margin: 0 auto; padding: 36px 40px; }
-    .header { margin-bottom: 14px; }
-    .header h1 { font-size: 22pt; font-weight: 700; letter-spacing: 0.5px; color: #111; }
-    .header .title { font-size: 11pt; font-weight: 400; color: #444; margin-top: 2px; }
-    .contact { margin-top: 6px; font-size: 9.5pt; color: #333; display: flex; flex-wrap: wrap; gap: 18px; }
-    .contact a { color: #333; text-decoration: none; }
-    hr { border: none; border-top: 1.5px solid #111; margin: 10px 0; }
-    .section { margin-bottom: 14px; }
-    .section-title { font-size: 9.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #111; margin-bottom: 8px; }
-    .about p { font-size: 10pt; color: #333; line-height: 1.55; font-style: italic; }
-    .job { margin-bottom: 12px; }
-    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-    .job-company { font-size: 10.5pt; font-weight: 700; color: #111; }
-    .job-meta { font-size: 9.5pt; color: #444; margin-bottom: 1px; }
-    .job-date { font-size: 9.5pt; color: #555; white-space: nowrap; }
-    .job-title { font-size: 10pt; font-style: italic; color: #333; margin-bottom: 5px; }
-    .job ul { padding-left: 16px; list-style-type: disc; }
-    .job li { font-size: 10pt; color: #222; margin-bottom: 3px; }
-    .two-col { display: flex; gap: 32px; }
-    .col-left { flex: 1.15; }
-    .col-right { flex: 0.85; }
-    .skill-block { margin-bottom: 9px; }
-    .skill-label { font-size: 9.5pt; font-weight: 700; color: #111; margin-bottom: 2px; }
-    .skill-block p { font-size: 9.5pt; color: #333; line-height: 1.45; }
-    .edu-item, .cert-item, .award-item { margin-bottom: 7px; }
-    .edu-name { font-size: 10pt; font-weight: 700; color: #111; }
-    .edu-detail, .cert-detail, .award-detail { font-size: 9.5pt; color: #444; }
-    @media print { body { padding: 0; } .page { padding: 24px 30px; } }
+    .page {
+      max-width: 744px;
+      margin: 0 auto;
+      padding: 40px 36px;
+    }
+
+    /* ── Header ── */
+    .name {
+      font-size: 24pt;
+      font-weight: 700;
+      color: #111111;
+      line-height: 1.1;
+      margin-bottom: 3px;
+    }
+    .subtitle {
+      font-size: 10pt;
+      font-weight: 400;
+      color: #555555;
+      margin-bottom: 8px;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 8pt;
+      color: #888888;
+      margin-bottom: 22px;
+      gap: 0;
+    }
+    .contact a { color: #888888; text-decoration: none; }
+    .sep { margin: 0 7px; color: #bbbbbb; }
+
+    /* ── Section ── */
+    .section { margin-bottom: 16px; }
+    .section-title {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      padding-bottom: 5px;
+      border-bottom: 0.75px solid #dddddd;
+      margin-bottom: 9px;
+    }
+
+    /* ── About ── */
+    .about-text {
+      font-size: 8.5pt;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 13px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .job-company-title {
+      font-size: 8pt;
+      font-weight: 700;
+      font-style: italic;
+      color: #888888;
+    }
+    .job-date {
+      font-size: 8pt;
+      font-style: italic;
+      color: #888888;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+    .job-meta {
+      font-size: 8pt;
+      font-style: italic;
+      color: #888888;
+      margin-bottom: 5px;
+    }
+    .job ul {
+      padding-left: 13px;
+      list-style-type: disc;
+    }
+    .job li {
+      font-size: 9pt;
+      color: #2d2d2d;
+      line-height: 1.5;
+      padding-top: 1.2pt;
+      padding-bottom: 1.2pt;
+    }
+
+    /* ── Skills — 2-col ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 28px;
+    }
+    .skill-row {
+      font-size: 8pt;
+      color: #555555;
+      line-height: 1.55;
+      margin-bottom: 5px;
+    }
+    .skill-row strong {
+      font-weight: 700;
+      color: #2d2d2d;
+    }
+
+    /* ── Bottom 3-col ── */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0 20px;
+    }
+    .bottom-section-title {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      padding-bottom: 5px;
+      border-bottom: 0.75px solid #dddddd;
+      margin-bottom: 9px;
+    }
+    .bottom-entry { margin-bottom: 7px; }
+    .bottom-name {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #2d2d2d;
+      line-height: 1.4;
+    }
+    .bottom-detail {
+      font-size: 8pt;
+      color: #555555;
+      line-height: 1.45;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .page { padding: 30px 28px; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
 <div class="page">
 
   <!-- Header -->
-  <div class="header">
-    <h1>Parth Anand</h1>
-    <div class="title">Product Designer &#8212; UI/UX</div>
-    <div class="contact">
-      <a href="mailto:parthanand1705@gmail.com">parthanand1705@gmail.com</a>
-      <span>+91 72096 84084</span>
-      <a href="https://linkedin.com/in/parthanand21" target="_blank">linkedin.com/in/parthanand21</a>
-      <a href="https://parthanand.in" target="_blank">parthanand.in</a>
-      <span>Noida, India</span>
-    </div>
+  <div class="name">Parth Anand</div>
+  <div class="subtitle">Product Designer, UI/UX</div>
+  <div class="contact">
+    <a href="mailto:parthanand1705@gmail.com">parthanand1705@gmail.com</a>
+    <span class="sep">&middot;</span>
+    <span>+91 72096 84084</span>
+    <span class="sep">&middot;</span>
+    <a href="https://linkedin.com/in/parthanand21" target="_blank">linkedin.com/in/parthanand21</a>
+    <span class="sep">&middot;</span>
+    <a href="https://parthanand.in" target="_blank">parthanand.in</a>
+    <span class="sep">&middot;</span>
+    <span>Noida, India</span>
   </div>
-
-  <hr />
 
   <!-- About -->
-  <div class="section about">
+  <div class="section">
     <div class="section-title">About</div>
-    <p>I started as a designer. Somewhere along the way I got obsessed with motion &#8212; and then AI showed up and changed what I could do alone. I use it to generate code, build 3D assets, synthesise research, and write copy; things that used to need a whole team. Five-plus years in, working on onboarding for a Web3 wallet, fraud research UX for a job platform used by millions, and a consumer camera redesign. The work is varied. The standard isn&#8217;t.</p>
+    <p class="about-text">I started as a designer. Somewhere along the way I got obsessed with motion &#8212; and then AI showed up and changed what I could do alone. I use it to generate code, build 3D assets, synthesise research, and write copy; things that used to need a whole team. Five-plus years in, working on onboarding for a Web3 wallet, fraud research UX for a job platform used by millions, and a consumer camera redesign. The work is varied. The standard isn&#8217;t.</p>
   </div>
-
-  <hr />
 
   <!-- Experience -->
   <div class="section">
     <div class="section-title">Experience</div>
 
-    <!-- InfoEdge -->
     <div class="job">
       <div class="job-header">
-        <span class="job-company">InfoEdge &middot; Product Designer, UI/UX</span>
+        <span class="job-company-title">InfoEdge &nbsp;&middot;&nbsp; Product Designer, UI/UX</span>
         <span class="job-date">Nov 2023 &#8211; Present</span>
       </div>
       <div class="job-meta">Job Hai &middot; Blue-collar hiring platform &middot; 1M+ active job seekers</div>
@@ -85,43 +193,40 @@
         <li>Led UX research on recruitment fraud in Delhi NCR, mapping 249 blacklisted recruiters and 653 fake listings and identifying Security Guard as the highest-risk segment.</li>
         <li>Synthesised findings into 6 prioritised design recommendations; projected impact modelling indicated a potential 68% reduction in fraudulent listings and a +22 pt platform NPS improvement.</li>
         <li>Designed core hiring workflows including job discovery, trust signals, and fraud reporting for a Hindi-first, low-digital-literacy user base, applying accessibility principles throughout to support inclusive design at scale.</li>
-        <li>Architected and maintained a scalable Figma design system with components, variables, tokens, and auto-layout across 4+ product surfaces; collaborated cross-functionally with PMs and engineers across agile sprint cycles.</li>
-        <li>Conducted 12+ usability testing sessions via Attention Insight and contextual inquiry, synthesising findings tracked against task success and retention metrics.</li>
+        <li>Built and maintained a scalable Figma design system with components, variables, tokens, and auto-layout across 4+ product surfaces; collaborated cross-functionally with PMs and engineers across agile sprint cycles.</li>
+        <li>Ran 12+ usability testing sessions via Attention Insight and contextual inquiry, synthesising findings tracked against task success and retention metrics.</li>
       </ul>
     </div>
 
-    <!-- CoinDCX -->
     <div class="job">
       <div class="job-header">
-        <span class="job-company">CoinDCX &middot; Senior Product Designer</span>
+        <span class="job-company-title">CoinDCX &nbsp;&middot;&nbsp; Senior Product Designer</span>
         <span class="job-date">Jun 2022 &#8211; Oct 2023</span>
       </div>
       <div class="job-meta">OKTO &middot; Self-custody Web3 DeFi wallet &middot; 1M+ users &middot; iOS &amp; Android</div>
       <ul>
         <li>Owned the onboarding experience for OKTO, the critical first-time user flow for a self-custody DeFi wallet serving over 1 million users across iOS and Android.</li>
-        <li>Conducted empathy mapping, journey mapping, card sorting, and heuristic evaluation across 3 critical flows; developed a Figma component library with design tokens for systematic UI consistency.</li>
-        <li>Crafted multi-step flows for cross-chain swaps, bridging, and earning, covering edge cases, error states, and latency UI for high-stakes financial decisions.</li>
+        <li>Ran empathy mapping, journey mapping, card sorting, and heuristic evaluation across 3 critical flows and built a Figma component library with design tokens for systematic UI consistency.</li>
+        <li>Designed multi-step flows for cross-chain swaps, bridging, and earning, covering edge cases, error states, and latency UI for high-stakes financial decisions.</li>
         <li>Produced Lottie motion assets and visual content for Web3 events Unfold &#8217;22 and Unfold &#8217;23.</li>
       </ul>
     </div>
 
-    <!-- HMLC -->
     <div class="job">
       <div class="job-header">
-        <span class="job-company">HMLC &middot; Lead Designer, UI/UX &amp; Motion</span>
+        <span class="job-company-title">HMLC &nbsp;&middot;&nbsp; Lead Designer, UI/UX &amp; Motion</span>
         <span class="job-date">Aug 2021 &#8211; Feb 2022</span>
       </div>
       <div class="job-meta">Harsh Mann Luxury Consultancy &middot; Boutique luxury retail &amp; lifestyle</div>
       <ul>
-        <li>Designed responsive, mobile-first interfaces for 3+ retail clients; spearheaded A/B testing and Hotjar heatmap analysis to validate layout decisions, achieving an estimated 18&#8211;22% improvement in page conversion rates.</li>
+        <li>Designed responsive, mobile-first interfaces for 3+ retail clients; ran A/B testing and Hotjar heatmap analysis to validate layout decisions, achieving an estimated 18&#8211;22% improvement in page conversion rates.</li>
         <li>Produced motion graphics, animations, and video content for digital campaigns.</li>
       </ul>
     </div>
 
-    <!-- Canon India -->
     <div class="job">
       <div class="job-header">
-        <span class="job-company">Canon India &middot; UI/UX Designer</span>
+        <span class="job-company-title">Canon India &nbsp;&middot;&nbsp; UI/UX Designer</span>
         <span class="job-date">Jan 2021 &#8211; Jul 2021</span>
       </div>
       <div class="job-meta">Apprenticeship under Ravi Dhingra Label &middot; Consumer camera redesign</div>
@@ -132,78 +237,56 @@
     </div>
   </div>
 
-  <hr />
-
-  <!-- Skills + Education -->
-  <div class="two-col">
-    <div class="col-left">
-      <div class="section">
-        <div class="section-title">Skills &amp; Tools</div>
-
-        <div class="skill-block">
-          <div class="skill-label">Design</div>
-          <p>End-to-end product design, UX research, interaction design, information architecture, wireframing, prototyping, motion design, visual design, user-centered design, mobile-first &amp; responsive design, accessibility &amp; inclusive design</p>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-label">Research</div>
-          <p>Contextual inquiry, empathy mapping, card sorting, heuristic evaluation, usability testing, A/B testing, affinity mapping, competitive benchmarking, journey mapping</p>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-label">Systems</div>
-          <p>Figma design systems, components, variables, design tokens, auto-layout, dev mode handoff, design documentation, design QA</p>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-label">Tools</div>
-          <p>Figma, FigJam, ProtoPie, Framer, Lottie, Adobe Suite (Photoshop, Illustrator, After Effects, Premiere Pro), Miro, Hotjar, Amplitude, Google Analytics, Jira, Dovetail, UserTesting, AI-directed workflows (Claude, Midjourney)</p>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-label">Web</div>
-          <p>Schema.org markup (JobPosting, NewsArticle, Product), SEO-aware UX, rich result optimisation, HTML/CSS (basic)</p>
-        </div>
+  <!-- Skills & Tools -->
+  <div class="section">
+    <div class="section-title">Skills &amp; Tools</div>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-row"><strong>Design &nbsp;</strong>End-to-end product design, UX research, interaction design, IA, wireframing, prototyping, motion design, visual design</div>
+        <div class="skill-row"><strong>Research &nbsp;</strong>Contextual inquiry, empathy mapping, card sorting, heuristic evaluation, usability testing, A/B testing, affinity mapping</div>
+        <div class="skill-row"><strong>Systems &nbsp;</strong>Figma design systems, components, variables, design tokens, auto-layout, dev mode handoff</div>
+      </div>
+      <div>
+        <div class="skill-row"><strong>Tools &nbsp;</strong>Figma, Framer, Lottie, Adobe Suite, Miro, Hotjar, Amplitude, AI-directed workflows (Claude, Midjourney)</div>
+        <div class="skill-row"><strong>Prototyping &nbsp;</strong>ProtoPie, Dovetail (research repositories, session tagging, synthesis)</div>
+        <div class="skill-row"><strong>Web &nbsp;</strong>Schema.org structured data, SEO-aware UX, rich result optimisation</div>
       </div>
     </div>
+  </div>
 
-    <div class="col-right">
-      <div class="section">
-        <div class="section-title">Education</div>
-        <div class="edu-item">
-          <div class="edu-name">National Institute of Fashion Technology</div>
-          <div class="edu-detail">B.Des. in Fashion Communication</div>
-          <div class="edu-detail">New Delhi &middot; 2018&#8211;2022</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-name">Delhi Public School, B.S. City</div>
-          <div class="edu-detail">Senior Secondary Certificate (CBSE), PCB</div>
-          <div class="edu-detail">2015</div>
-        </div>
+  <!-- Education · Recognition · Certifications -->
+  <div class="bottom-grid">
+    <div>
+      <div class="bottom-section-title">Education</div>
+      <div class="bottom-entry">
+        <div class="bottom-name">NIFT, New Delhi</div>
+        <div class="bottom-detail">B.Des. in Fashion Communication &middot; 2018&#8211;2022</div>
       </div>
-
-      <div class="section">
-        <div class="section-title">Recognition</div>
-        <div class="award-item">
-          <div class="edu-name">Jamini Roy Gold Medal</div>
-          <div class="award-detail">Awarded by the President of India, Smt. Droupadi Murmu &middot; 2016</div>
-        </div>
-        <div class="award-item">
-          <div class="edu-name">Oasis Inter-College Film Festival</div>
-          <div class="award-detail">Best Film &middot; 2018 &amp; 2019</div>
-        </div>
+      <div class="bottom-entry">
+        <div class="bottom-name">Delhi Public School, B.S. City</div>
+        <div class="bottom-detail">Senior Secondary Certificate (CBSE), PCB &middot; 2015</div>
       </div>
-
-      <div class="section">
-        <div class="section-title">Certifications</div>
-        <div class="cert-item">
-          <div class="edu-name">Professional UX Design</div>
-          <div class="cert-detail">University of Cambridge &middot; Coursera, 2026</div>
-        </div>
-        <div class="cert-item">
-          <div class="edu-name">Foundations of UX Design</div>
-          <div class="cert-detail">Google &middot; Coursera, 2021</div>
-        </div>
+    </div>
+    <div>
+      <div class="bottom-section-title">Recognition</div>
+      <div class="bottom-entry">
+        <div class="bottom-name">Jamini Roy Gold Medal</div>
+        <div class="bottom-detail">Awarded by the President of India, Smt. Droupadi Murmu &middot; 2016</div>
+      </div>
+      <div class="bottom-entry">
+        <div class="bottom-name">Oasis Inter-College Film Festival</div>
+        <div class="bottom-detail">Best Film &middot; 2018, 2019</div>
+      </div>
+    </div>
+    <div>
+      <div class="bottom-section-title">Certifications</div>
+      <div class="bottom-entry">
+        <div class="bottom-name">Professional UX Design</div>
+        <div class="bottom-detail">University of Cambridge via Coursera &middot; 2026</div>
+      </div>
+      <div class="bottom-entry">
+        <div class="bottom-name">Foundations of UX Design</div>
+        <div class="bottom-detail">Google via Coursera &middot; 2021</div>
       </div>
     </div>
   </div>
