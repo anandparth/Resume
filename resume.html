@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parth Anand — Product Designer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Calibri', 'Arial', sans-serif;
+      background: #fff;
+      color: #2d2d2d;
+    }
+    .page {
+      max-width: 744px;
+      margin: 0 auto;
+      padding: 40px 36px;
+    }
+
+    /* ── Header ── */
+    .name {
+      font-size: 24pt;
+      font-weight: 700;
+      color: #111111;
+      line-height: 1.08;
+      margin-bottom: 2px;
+    }
+    .subtitle {
+      font-size: 10pt;
+      font-weight: 400;
+      color: #555555;
+      line-height: 1.08;
+      margin-bottom: 5px;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 8pt;
+      color: #888888;
+      line-height: 1.08;
+      margin-bottom: 10px;
+      gap: 0;
+    }
+    .contact a { color: #888888; text-decoration: none; }
+    .sep { margin: 0 7px; color: #bbbbbb; }
+
+    /* ── Section ── */
+    .section { margin-bottom: 8px; }
+    .section-title {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      line-height: 1.08;
+      padding-bottom: 3px;
+      border-bottom: 0.75px solid #dddddd;
+      margin-bottom: 6px;
+    }
+
+    /* ── About ── */
+    .about-text {
+      font-size: 8.5pt;
+      color: #333333;
+      line-height: 1.15;
+    }
+    .core-skills {
+      font-size: 8.5pt;
+      color: #333333;
+      line-height: 1.15;
+      margin-top: 4px;
+    }
+    .core-skills strong { color: #2d2d2d; }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 6px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0;
+    }
+    .job-company-title {
+      font-size: 8pt;
+      font-weight: 700;
+      font-style: italic;
+      color: #888888;
+      line-height: 1.08;
+    }
+    .job-date {
+      font-size: 8pt;
+      font-style: italic;
+      color: #888888;
+      line-height: 1.08;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+    .job-meta {
+      font-size: 8pt;
+      font-style: italic;
+      color: #888888;
+      line-height: 1.08;
+      margin-bottom: 2px;
+    }
+    .job ul {
+      padding-left: 13px;
+      list-style-type: disc;
+    }
+    .job li {
+      font-size: 9pt;
+      color: #2d2d2d;
+      line-height: 1.12;
+      margin-bottom: 1px;
+    }
+
+    /* ── Skills — 2-col ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 22px;
+    }
+    .skill-row {
+      font-size: 8pt;
+      color: #555555;
+      line-height: 1.15;
+      margin-bottom: 3px;
+    }
+    .skill-row strong {
+      font-weight: 700;
+      color: #2d2d2d;
+    }
+
+    /* ── Bottom ── */
+    .bottom-section-title {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      line-height: 1.08;
+      padding-bottom: 3px;
+      border-bottom: 0.75px solid #dddddd;
+      margin-bottom: 6px;
+    }
+    .bottom-entry { margin-bottom: 3px; }
+    .bottom-detail {
+      font-size: 8pt;
+      color: #555555;
+      line-height: 1.15;
+    }
+    .bottom-detail strong { color: #2d2d2d; }
+
+    /* Force 1 page: zero @page margins, padding via .page itself */
+    @page { size: letter; margin: 0; }
+    @media print {
+      body { margin: 0; }
+      .page { padding: 0.42in 0.375in; max-width: 100%; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="name">Parth Anand</div>
+  <div class="subtitle">Product Designer, UI/UX</div>
+  <div class="contact">
+    <a href="mailto:parthanand1705@gmail.com">parthanand1705@gmail.com</a>
+    <span class="sep">&middot;</span>
+    <span>+91 72096 84084</span>
+    <span class="sep">&middot;</span>
+    <a href="https://linkedin.com/in/parthanand21" target="_blank">linkedin.com/in/parthanand21</a>
+    <span class="sep">&middot;</span>
+    <a href="https://parthanand.in" target="_blank">parthanand.in</a>
+    <span class="sep">&middot;</span>
+    <span>Noida, India</span>
+  </div>
+
+  <!-- About -->
+  <div class="section">
+    <div class="section-title">About</div>
+    <p class="about-text">Product designer with 5+ years across fintech, Web3, and consumer platforms, spanning UX research, interaction design, and design systems. Recent work: onboarding design for a 1M+ user DeFi wallet, fraud-prevention UX for a job platform serving 1M+ active seekers, and a consumer camera shopping redesign. Uses AI-directed workflows to accelerate code generation, asset production, and research synthesis.</p>
+    <p class="core-skills"><strong>Core Skills&nbsp; </strong>Product &amp; UI/UX Design &middot; UX Research &middot; Design Systems (Figma) &middot; Interaction Design &middot; Prototyping &middot; Usability Testing</p>
+  </div>
+
+  <!-- Experience -->
+  <div class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company-title">InfoEdge &nbsp;&middot;&nbsp; Creative Designer (Product UI/UX)</span>
+        <span class="job-date">Nov 2023 &#8211; Present</span>
+      </div>
+      <div class="job-meta">Job Hai &middot; Blue-collar hiring platform &middot; 1M+ active job seekers</div>
+      <ul>
+        <li>Built and maintained a Figma design system (components, variables, tokens, auto-layout) across 4+ product surfaces in close cross-functional collaboration with PMs and engineers, scaling design consistency across agile sprint cycles.</li>
+        <li>Mapped 249 blacklisted recruiters and 653 fake listings across Delhi NCR to identify Security Guard as the platform&#8217;s highest-risk fraud segment, surfacing a previously unquantified trust gap for leadership.</li>
+        <li>Synthesised fraud research into a phased design roadmap of 6 prioritised recommendations, modeling a projected 68% reduction in fraudulent listings and a +22 pt NPS lift (currently in implementation, not yet shipped).</li>
+        <li>Designed core hiring workflows (job discovery, trust signals, fraud reporting) for a Hindi-first, low-digital-literacy user base, applying accessibility principles throughout to improve task success and retention signals.</li>
+        <li>Ran 12+ moderated and unmoderated usability sessions via Attention Insight and contextual inquiry, tracking findings against task success and retention metrics to validate design assumptions before rollout.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company-title">CoinDCX &nbsp;&middot;&nbsp; Senior Executive Designer (Product Design)</span>
+        <span class="job-date">Jun 2022 &#8211; Oct 2023</span>
+      </div>
+      <div class="job-meta">OKTO &middot; Self-custody Web3 DeFi wallet &middot; 1M+ users &middot; iOS &amp; Android</div>
+      <ul>
+        <li>Owned a core onboarding feature within OKTO&#8217;s first-time user flow for a self-custody wallet serving 1M+ users across iOS and Android, leading research through to final UI for that surface.</li>
+        <li>De-risked 3 critical flows ahead of build (empathy mapping, journey mapping, card sorting, heuristic evaluation), then designed multi-step swap, bridging, and earning flows with explicit coverage of edge cases, error states, and latency UI.</li>
+        <li>Built a Figma component library with design tokens for systemic UI consistency, and produced Lottie motion assets and visual content for two major Web3 community events (Unfold &#8217;22, Unfold &#8217;23).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company-title">HMLC &nbsp;&middot;&nbsp; Lead Designer, UI/UX &amp; Motion</span>
+        <span class="job-date">Aug 2021 &#8211; Feb 2022</span>
+      </div>
+      <div class="job-meta">Harsh Mann Luxury Consultancy &middot; Boutique luxury retail &amp; lifestyle</div>
+      <ul>
+        <li>Designed responsive, mobile-first interfaces for 3+ retail clients and validated layout decisions through A/B testing and Hotjar heatmap analysis, improving estimated page conversion rates by 18&#8211;22%.</li>
+        <li>Strengthened campaign performance by producing motion graphics, animations, and video content for digital marketing initiatives.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company-title">Canon India &nbsp;&middot;&nbsp; UI/UX Designer (Apprenticeship)</span>
+        <span class="job-date">Jan 2021 &#8211; Jul 2021</span>
+      </div>
+      <div class="job-meta">Apprenticeship under Ravi Dhingra Label &middot; Consumer camera redesign</div>
+      <ul>
+        <li>Conceptually redesigned Canon India&#8217;s camera shopping experience, simplifying discovery, comparison, and purchase journeys across 5+ campaign pages, with high-fidelity mockups and annotated prototypes for developer reference.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Skills & Tools -->
+  <div class="section">
+    <div class="section-title">Skills &amp; Tools</div>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-row"><strong>Design &amp; Research &nbsp;</strong>Wireframing, motion and visual design, empathy mapping, card sorting, heuristic evaluation, A/B testing, affinity mapping</div>
+        <div class="skill-row"><strong>Systems &amp; Frontend &nbsp;</strong>Figma design systems (components, variables, tokens, auto-layout), HTML/CSS/JS, Three.js, WebGL, GSAP, Blender, Vercel deployment</div>
+      </div>
+      <div>
+        <div class="skill-row"><strong>Tools &amp; Web &nbsp;</strong>Framer, Lottie, Adobe Suite, Miro, Hotjar, Amplitude, ProtoPie, Dovetail &middot; Schema.org structured data, SEO-aware UX, rich result optimisation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education & Recognition -->
+  <div class="section">
+    <div class="bottom-section-title">Education &amp; Recognition</div>
+    <div class="bottom-entry">
+      <div class="bottom-detail"><strong>NIFT, New Delhi</strong> &middot; B.Des. in Fashion Communication &middot; 2017&#8211;2021 &nbsp;|&nbsp; <strong>Jamini Roy Gold Medal</strong> &middot; Awarded by the President of India, Smt. Droupadi Murmu &middot; 2016</div>
+    </div>
+    <div class="bottom-entry">
+      <div class="bottom-detail"><strong>Professional UX Design</strong>, University of Cambridge &middot; 2026; <strong>Foundations of UX Design</strong>, Google &middot; 2021 (via Coursera)</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
