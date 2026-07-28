@@ -110,6 +110,15 @@ const doc = new Document({
       ),
 
       ...roleBlock(
+        "Independent - Motion Designer (Freelance)",
+        "Feb 2022 - May 2022",
+        null,
+        [
+          "Delivered animation and motion-graphics packages for YouTube content creators on freelance client timelines."
+        ]
+      ),
+
+      ...roleBlock(
         "HMLC (Harsh Mann Luxury Consultancy) - Lead Designer, UI/UX & Motion",
         "Aug 2021 - Feb 2022",
         "Boutique luxury retail & lifestyle consultancy",
@@ -162,10 +171,12 @@ function roleBlock(titleLine, dates, subLine, bullets, isLast) {
       new TextRun({ text: `\t${dates}`, bold: true, size: 17 }),
     ]
   }));
-  out.push(new Paragraph({
-    spacing: { after: 30 },
-    children: [ new TextRun({ text: subLine, italics: true, size: 16, color: "404040" }) ]
-  }));
+  if (subLine) {
+    out.push(new Paragraph({
+      spacing: { after: 30 },
+      children: [ new TextRun({ text: subLine, italics: true, size: 16, color: "404040" }) ]
+    }));
+  }
   bullets.forEach((b, i) => {
     out.push(new Paragraph({
       numbering: { reference: "bullets", level: 0 },
@@ -189,12 +200,12 @@ function skillLine(label, text, isLast) {
 function eduItem(titleText, dateText, isLast) {
   return [
     new Paragraph({
-      spacing: { after: 8 },
-      children: [ new TextRun({ text: titleText, size: 18, bold: true }) ]
-    }),
-    new Paragraph({
-      spacing: { after: isLast ? 0 : 40 },
-      children: [ new TextRun({ text: dateText, size: 17, italics: true, color: "404040" }) ]
+      tabStops: [{ type: TabStopType.RIGHT, position: RIGHT_TAB_POS }],
+      spacing: { after: isLast ? 0 : 30 },
+      children: [
+        new TextRun({ text: titleText, size: 18, bold: true }),
+        new TextRun({ text: `\t${dateText}`, size: 17, italics: true, color: "404040" }),
+      ]
     })
   ];
 }
