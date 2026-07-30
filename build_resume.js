@@ -114,7 +114,7 @@ const doc = new Document({
         "Feb 2022 - May 2022",
         null,
         [
-          "Delivered animation and motion-graphics packages for YouTube content creators on freelance client timelines."
+          "Delivered end-to-end animation and motion-graphics packages for YouTube creators on freelance timelines, deepening expertise in After Effects and Lottie while applying motion design to scalable UI experiences and prototyping 3D interactions with Meta AR/VR technology."
         ]
       ),
 
