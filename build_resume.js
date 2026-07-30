@@ -12,7 +12,7 @@ const {
 const NAVY = "1A1A1A";
 const RULE = "1A1A1A";
 const FONT = "Calibri";
-const LINE = { line: 262, lineRule: "auto" }; // ~1.09x, mirrors tightened HTML line-height
+const LINE = { line: 248, lineRule: "auto" }; // ~1.03x, tightened slightly further to fit the papercade project line on 1 page
 const PAGE_MARGIN_L = 720, PAGE_MARGIN_R = 720, PAGE_WIDTH = 12240;
 const RIGHT_TAB_POS = PAGE_WIDTH - PAGE_MARGIN_L - PAGE_MARGIN_R; // true usable-width right edge, NOT TabStopPosition.MAX (that constant is A4-sized and was landing ~1.2in short on this US Letter layout)
 
@@ -143,7 +143,8 @@ const doc = new Document({
       skillLine("Design & Research:", "Wireframing, information architecture, motion and visual design, empathy mapping, card sorting, heuristic evaluation, A/B testing, affinity mapping, WCAG accessibility standards"),
       skillLine("Strategy & Collaboration:", "UX roadmapping, stakeholder presentations, design reviews, cross-functional alignment with PMs and engineering, client-facing communication"),
       skillLine("Systems & Frontend:", "Figma design systems (components, variables, tokens, auto-layout), HTML/CSS/JS, Three.js, WebGL, GSAP, Blender, Vercel deployment"),
-      skillLine("Tools & AI Workflows:", "Framer, Lottie, Adobe Creative Suite, Miro, Hotjar, Amplitude, ProtoPie, Dovetail; AI-directed prototyping, asset production, and research synthesis (Claude, Midjourney)", true),
+      skillLine("Tools & AI Workflows:", "Framer, Lottie, Adobe Creative Suite, Miro, Hotjar, Amplitude, ProtoPie, Dovetail; AI-directed prototyping, asset production, and research synthesis (Claude, Midjourney)"),
+      skillLine("Personal Project:", "papercade - solo-built open-source UI library (12 components, pixel x sketch aesthetic), published to npm with a live demo; strict TypeScript, CI/CD - github.com/anandparth/papercade", true),
 
       sectionHeading("EDUCATION & CERTIFICATIONS"),
       ...eduItem("B.Des. in Fashion Communication - National Institute of Fashion Technology (NIFT), New Delhi", "2017 - 2021"),
@@ -156,7 +157,7 @@ const doc = new Document({
 function sectionHeading(text) {
   return new Paragraph({
     border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: RULE, space: 1 } },
-    spacing: { before: 80, after: 40 },
+    spacing: { before: 60, after: 30 },
     children: [ new TextRun({ text, bold: true, size: 18, color: NAVY, allCaps: true }) ]
   });
 }
