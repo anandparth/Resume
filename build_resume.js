@@ -12,7 +12,7 @@ const {
 const NAVY = "1A1A1A";
 const RULE = "1A1A1A";
 const FONT = "Calibri";
-const LINE = { line: 248, lineRule: "auto" }; // ~1.03x, tightened slightly further to fit the papercade project line on 1 page
+const LINE = { line: 242, lineRule: "auto" }; // ~1.01x, loosened after merging/trimming bullets in the final audit pass
 const PAGE_MARGIN_L = 720, PAGE_MARGIN_R = 720, PAGE_WIDTH = 12240;
 const RIGHT_TAB_POS = PAGE_WIDTH - PAGE_MARGIN_L - PAGE_MARGIN_R; // true usable-width right edge, NOT TabStopPosition.MAX (that constant is A4-sized and was landing ~1.2in short on this US Letter layout)
 
@@ -90,8 +90,8 @@ const doc = new Document({
         [
           "Designed four core screens of the Job Hai recruiter dashboard (candidate cards, candidate management, advanced filters, bulk hiring), lifting average actions per recruiter ~11% and overall platform actions ~8%.",
           "Built and scaled a Figma design system (components, variables, tokens, auto-layout) across 4+ product surfaces with PMs and engineers, standardizing consistency across agile sprint cycles.",
-          "Led a fraud-prevention initiative end to end: mapped 249 blacklisted recruiters and 653 fake listings across Delhi NCR, identifying Security Guard as the highest-risk job segment.",
-          "Modeled and presented a roadmap of 6 prioritized recommendations to senior stakeholders, projecting a 68% fraud reduction and a +22-point NPS lift; approved for implementation.",
+          "Mentored a junior designer on the Job Hai team, reviewing interaction-design work and onboarding them onto the team's Figma design system and workflow.",
+          "Led a fraud-prevention initiative end to end: mapped 249 blacklisted recruiters and 653 fake listings across Delhi NCR, then modeled and presented a roadmap of 6 prioritized recommendations to senior stakeholders, projecting a 68% fraud reduction and a +22-point NPS lift; approved for implementation.",
           "Designed hiring workflows (job discovery, trust signals, fraud reporting) for a Hindi-first, low-digital-literacy user base, applying WCAG accessibility principles to lift task success and retention.",
           "Ran 12+ usability sessions combining moderated contextual inquiry, unmoderated testing, and Attention Insight eye-tracking to pressure-test design assumptions before rollout."
         ]
@@ -100,11 +100,11 @@ const doc = new Document({
       ...roleBlock(
         "CoinDCX - Senior Executive Designer, Product Design",
         "Jun 2022 - Oct 2023",
-        "OKTO | Self-custody Web3 DeFi wallet | 1M+ users | iOS & Android",
+        "Okto | Self-custody Web3 DeFi wallet | 1M+ users | iOS & Android",
         [
           "De-risked 3 critical flows ahead of build (empathy mapping, journey mapping, card sorting, heuristic evaluation), then designed multi-step swap, bridging, and earning flows covering edge cases, error states, and latency UI.",
-          "Owned research-to-UI for OKTO's first-time user onboarding, a core surface of a self-custody wallet serving 1M+ users across iOS and Android.",
-          "Built a Figma component library with design tokens for systemic UI consistency.",
+          "Owned research-to-UI for Okto's first-time user onboarding, a core surface of a self-custody wallet serving 1M+ users across iOS and Android.",
+          "Established a cross-platform Figma component library with design tokens to keep Okto's iOS and Android UI consistent as new flows shipped.",
           "Produced Lottie motion assets and visual content for two major Web3 community events (Unfold '22, '23)."
         ]
       ),
@@ -124,17 +124,17 @@ const doc = new Document({
         "Boutique luxury retail & lifestyle consultancy",
         [
           "Designed responsive, mobile-first interfaces for 3+ retail clients, validating layout via A/B testing and Hotjar heatmap analysis.",
-          "Drove an 18-22% uplift in page conversion rate across tested variants for boutique retail clients."
+          "Achieved as much as a 22% increase in page conversion rate across tested variants.",
+          "Owned the client-facing review process and developer handoff across those engagements - the primary point of contact translating client decisions into shippable specs for engineering."
         ]
       ),
 
       ...roleBlock(
         "Canon India - UI/UX Designer (Apprenticeship)",
         "Jan 2021 - Jul 2021",
-        "Apprenticeship under Ravi Dhingra Label | Consumer camera redesign",
+        "Consumer camera redesign (concept project)",
         [
-          "Conceptually redesigned Canon India's camera shopping experience, simplifying discovery, comparison, and purchase journeys across 5+ campaign pages.",
-          "Delivered high-fidelity mockups and annotated prototypes for developer handoff."
+          "Redesigned Canon India's camera shopping experience, simplifying discovery, comparison, and purchase journeys across 5+ campaign pages."
         ],
         true
       ),
@@ -144,7 +144,7 @@ const doc = new Document({
       skillLine("Strategy & Collaboration:", "UX roadmapping, stakeholder presentations, design reviews, cross-functional alignment with PMs and engineering, client-facing communication"),
       skillLine("Systems & Frontend:", "Figma design systems (components, variables, tokens, auto-layout), HTML/CSS/JS, Three.js, WebGL, GSAP, Blender, Vercel deployment"),
       skillLine("Tools & AI Workflows:", "Framer, Lottie, Adobe Creative Suite, Miro, Hotjar, Amplitude, ProtoPie, Dovetail; AI-directed prototyping, asset production, and research synthesis (Claude, Midjourney)"),
-      skillLine("Personal Project:", "papercade - solo-built open-source UI library (12 components, pixel x sketch aesthetic), published to npm with a live demo; strict TypeScript, CI/CD - github.com/anandparth/papercade", true),
+      skillLine("Personal Project:", "papercade - solo-built, MIT-licensed open-source UI library (12 components, pixel x sketch aesthetic); strict TypeScript, automated CI/CD (typecheck, tests, auto-deploy), published to npm with a live demo - github.com/anandparth/papercade", true),
 
       sectionHeading("EDUCATION & CERTIFICATIONS"),
       ...eduItem("B.Des. in Fashion Communication - National Institute of Fashion Technology (NIFT), New Delhi", "2017 - 2021"),
@@ -157,7 +157,7 @@ const doc = new Document({
 function sectionHeading(text) {
   return new Paragraph({
     border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: RULE, space: 1 } },
-    spacing: { before: 60, after: 30 },
+    spacing: { before: 52, after: 26 },
     children: [ new TextRun({ text, bold: true, size: 18, color: NAVY, allCaps: true }) ]
   });
 }
@@ -166,7 +166,7 @@ function roleBlock(titleLine, dates, subLine, bullets, isLast) {
   const out = [];
   out.push(new Paragraph({
     tabStops: [{ type: TabStopType.RIGHT, position: RIGHT_TAB_POS }],
-    spacing: { before: 60, after: 10 },
+    spacing: { before: 52, after: 9 },
     children: [
       new TextRun({ text: titleLine, bold: true, size: 18 }),
       new TextRun({ text: `\t${dates}`, bold: true, size: 17 }),
@@ -174,14 +174,14 @@ function roleBlock(titleLine, dates, subLine, bullets, isLast) {
   }));
   if (subLine) {
     out.push(new Paragraph({
-      spacing: { after: 30 },
+      spacing: { after: 26 },
       children: [ new TextRun({ text: subLine, italics: true, size: 16, color: "404040" }) ]
     }));
   }
   bullets.forEach((b, i) => {
     out.push(new Paragraph({
       numbering: { reference: "bullets", level: 0 },
-      spacing: { after: 15, ...LINE },
+      spacing: { after: 13, ...LINE },
       children: [ new TextRun({ text: b, size: 18 }) ]
     }));
   });
@@ -190,7 +190,7 @@ function roleBlock(titleLine, dates, subLine, bullets, isLast) {
 
 function skillLine(label, text, isLast) {
   return new Paragraph({
-    spacing: { after: isLast ? 0 : 40, ...LINE },
+    spacing: { after: isLast ? 0 : 36, ...LINE },
     children: [
       new TextRun({ text: label + " ", bold: true, size: 18 }),
       new TextRun({ text, size: 18 }),
